@@ -1,43 +1,31 @@
 <script>
-	import './button.css';
-	import { createEventDispatcher } from 'svelte';
-	/**
-	 * Is this the principal call to action on the page?
-	 */
-	export let primary = false;
-
-	/**
-	 * What background color to use
-	 */
-	export let backgroundColor;
-	/**
-	 * How large should the button be?
-	 */
-	export let size = 'medium';
-	/**
-	 * Button contents
-	 */
+	import Button, { Label } from '@smui/button';
+	export let color = '';
+	export let variant = '';
+	export let size = '';
 	export let label = '';
-
-	let mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-	let style = backgroundColor ? `background-color: ${backgroundColor}` : '';
-
-	const dispatch = createEventDispatcher();
-
-	/**
-	 * Optional click handler
-	 */
-	function onClick(event) {
-		dispatch('click', event);
-	}
+	let clicked = 0;
 </script>
 
-<button
-	type="button"
-	class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-	{style}
-	on:click={onClick}
->
-	{label}
-</button>
+<Button on:click={() => clicked++} {variant} class={size} {color}>
+	<Label>{label}</Label>
+</Button>
+
+<!-- markup (zero or more items) goes here -->
+<style>
+	/* your styles go here */
+	.small {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+
+	.medium {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	.large {
+		width: 1.3rem;
+		height: 1.3rem;
+	}
+</style>

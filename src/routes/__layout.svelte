@@ -1,16 +1,12 @@
 <script lang="ts">
 	// Start: Local Imports
-
-	// Start: External Imports
-	import '../styles/tailwind.css';
-
 	// End: External Imports
-
 	// Core services
-
 	// Components
-	import Header from '$ui/components/headers/Header.svelte';
-	import Footer from '$ui/components/footers/Footer.svelte';
+	import '@styles/_smui-theme.scss';
+	import '@styles/main.scss';
+	// import Header from '$components/header/Header.svelte';
+	import Footer from '@components/footer/Footer.svelte';
 	// End: Local Imports
 
 	// Start: Local component properties
@@ -31,7 +27,7 @@
 
 <div class="bg-white dark:bg-black min-w-full max-w-full min-h-full max-h-full">
 	<!-- Start: Header Navigation -->
-	<Header on:toggleTheme="{(e) => toggleThemeMode(e)}" useThemeModeButton="{true}" />
+	<!-- <Header on:toggleTheme={(e) => toggleThemeMode(e)} useThemeModeButton={true} /> -->
 	<!-- End: Header Navigation -->
 	<main class="flex flex-col w-full bg-white dark:bg-black min-w-full min-h-full max-h-full">
 		<article
