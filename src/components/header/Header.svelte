@@ -1,10 +1,10 @@
 <script>
 	import './header.css';
-	import Button from '../button/Button.svelte';
-
+	import Button from '$components/button/Button.svelte';
+	import Button from '$components/button/Button.svelte';
+	import Yuri from '$assets/yuri.png';
 	import { createEventDispatcher } from 'svelte';
-
-	export let user = null;
+	export let user = '';
 
 	const dispatch = createEventDispatcher();
 
@@ -22,6 +22,7 @@
 <header>
 	<div class="wrapper">
 		<div>
+			<img src={Yuri} />
 			<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 				<g fill="none" fill-rule="evenodd">
 					<path
@@ -39,11 +40,17 @@
 		</div>
 		<div>
 			{#if user}
-				<Button size="small" on:click={onLogout} label="Log out" />
+				<Button color="primary" variant="raised" size="small" on:click={onLogout} label="Log out" />
 			{/if}
 			{#if !user}
-				<Button size="small" on:click={onLogin} label="Log in" />
-				<Button primary size="small" on:click={onCreateAccount} label="Sign up" />
+				<Button color="primary" variant="raised" size="small" on:click={onLogin} label="Log in" />
+				<Button
+					color="primary"
+					variant="raised"
+					size="small"
+					on:click={onCreateAccount}
+					label="Sign up"
+				/>
 			{/if}
 		</div>
 	</div>

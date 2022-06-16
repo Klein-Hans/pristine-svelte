@@ -1,13 +1,13 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
-	import Button from './Button';
+	import Card from './Card';
 </script>
 
 <!-- More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export -->
 <!-- More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes -->
 <Meta
-	title="Example/Button"
-	component={Button}
+	title="Example/Card"
+	component={Card}
 	argTypes={{
 		backgroundColor: { control: 'color' },
 		label: { control: 'text' },
@@ -22,7 +22,7 @@
 
 <!-- More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args -->
 <Template let:args>
-	<Button {...args} on:click={args.onClick} />
+	<Card {...args} />
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->

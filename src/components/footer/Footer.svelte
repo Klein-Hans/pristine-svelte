@@ -1,11 +1,9 @@
-<script>
-	import Header from '@components/header/Header.svelte';
+<script lang="ts">
+	// your script goes here
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<main>
-	<Header />
-</main>
+<footer>Footer</footer>
 
 <style>
 	/* your styles go here */
