@@ -1,8 +1,6 @@
 <script>
 	import './header.css';
 	import Button from '$components/button/Button.svelte';
-	import Button from '$components/button/Button.svelte';
-	import Yuri from '$assets/yuri.png';
 	import { createEventDispatcher } from 'svelte';
 	export let user = '';
 

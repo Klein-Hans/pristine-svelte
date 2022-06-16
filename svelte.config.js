@@ -37,11 +37,12 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					$components: resolve('./src/components')
-					// '@helpers': resolve(__dirname, './src/helpers'),
-					// '@hooks': resolve(__dirname, './src/hooks'),
-					// '@store': resolve(__dirname, './src/store'),
-					// '@styles': resolve(__dirname, './src/styles')
+					$components: resolve('./src/components'),
+					$store: resolve('./src/store'),
+					$hooks: resolve('./src/hooks'),
+					$helpers: resolve('./src/helpers'),
+					$styles: resolve('./src/styles'),
+					$assets: resolve('./src/assets')
 					// $models: resolve(__dirname, './src/lib/models'),
 					// $data: resolve(__dirname, './src/lib/data'),
 					// $environment: resolve(__dirname, './src/environments')

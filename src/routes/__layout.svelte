@@ -3,10 +3,10 @@
 	// End: External Imports
 	// Core services
 	// Components
-	import '@styles/_smui-theme.scss';
-	import '@styles/main.scss';
+	import '$styles/_smui-theme.scss';
+	import '$styles/main.scss';
 	// import Header from '$components/header/Header.svelte';
-	import Footer from '@components/footer/Footer.svelte';
+	import Footer from '$components/footer/Footer.svelte';
 	// End: Local Imports
 
 	// Start: Local component properties
